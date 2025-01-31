@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #ff6f61, #de1d3e);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ffdd57;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .container {
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            margin-top: 80px;
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        input:focus {
+            border-color: #ffdd57;
+            background: rgba(255, 255, 255, 0.5);
+            outline: none;
+        }
+        .btn {
+            padding: 12px;
+            font-size: 1.2rem;
+            color: white;
+            background: #ffdd57;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .btn:hover {
+            background: #ffbb33;
+            transform: scale(1.05);
+        }
+        .forgot-pass, .register-link {
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        .forgot-pass a, .register-link a {
+            color: #ffdd57;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .forgot-pass a:hover, .register-link a:hover {
+            color: #ffbb33;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .social-buttons button {
+            flex: 1;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        .google-btn {
+            background: #dd4b39;
+            color: white;
+        }
+        .facebook-btn {
+            background: #3b5998;
+            color: white;
+        }
+        .google-btn:hover {
+            background: #c23321;
+        }
+        .facebook-btn:hover {
+            background: #2d4373;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="#">Logo</a>
+        </div>
+        <div class="nav-right">
+            <a href="#"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-info-circle"></i></a>
+            <a href="#"><i class="fas fa-phone-alt"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="social-buttons">
+                <button type="button" class="google-btn"><i class="fab fa-google"></i> Login with Google</button>
+                <button type="button" class="facebook-btn"><i class="fab fa-facebook-f"></i> Login with Facebook</button>
+            </div>
+            <p class="forgot-pass"><a href="#">Forgot Password?</a></p>
+            <p class="register-link"><a href="#">Don't have an account? Register</a></p>
+        </form>
+    </div>
+</body>
+</html>
